@@ -1,0 +1,64 @@
+
+<div class="profile-page">
+  <div class="main main-raised"> 
+		<div class="profile-content">
+            <div class="container"  >
+                <div class="row">
+        	           <div class="profile">
+                       <ng-container>
+	                        <div class="avatar">
+                            <!-- <div *ngIf="userPic then img1; else img2" > -->
+                              
+                              
+                            <!-- </div> -->
+                            <ng-template [ngIf]="userPic">
+                              <img  src="{{img3}}" alt="patient" />
+                            </ng-template>
+                            <ng-template [ngIf]="!userPic"> 
+                            <img  src="{{img4}}" alt="doctor" />
+                            </ng-template>
+
+                          </div>
+                        </ng-container>
+	                        <div class="name" >
+	                            <h3 class="title"> {{_userService.dataService.firstName}}  {{_userService.dataService.lastName}} </h3>
+								              <ng-template [ngIf]="userPic">
+                              <h6>Patient</h6>
+                              </ng-template>
+                              <ng-template [ngIf]="!userPic">
+                                <h6>Doctor</h6>
+                              </ng-template> 
+
+
+								
+	                        </div>
+	                    </div>
+                </div>
+                <div class="description text-center">
+                
+                    <div class="container p-3 ">
+                        <div class="row">
+                          <div class="col-sm  p-3 my-3 border">
+                            <h4>user ID</h4>
+                            {{_userService.dataService.userId}}
+                          </div>
+                          <div class="col-sm  p-3 my-3 border">
+                            <h4>e-mail</h4>
+                            {{_userService.dataService.email}}
+                          </div>
+                          <!-- <div class="col-sm  p-3 my-3 border">
+                            <h4>date of birth</h4>
+                            01/01/1996
+                          </div> -->
+                        </div>
+                </div>
+      		</div>
+          </div>
+        </div>
+	</div>
+
+</div>
+
+
+
+

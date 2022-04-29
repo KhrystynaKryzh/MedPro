@@ -1,0 +1,36 @@
+<div class="container">
+    <div  id="datepicker">
+        <h4>Select date and time: </h4>
+        <input placeholder="Select date" type="date" value="2022-05-02" class="form-control"  required #date>
+        <br>
+        <select class="form-select" aria-label="time" required #time>
+            <!-- <option selected> Select time </option> -->
+            <option value="09:00:00.000">9:00 am - 10:00 am</option>
+            <option value="10:00:00.000">10:00 am - 11:00 am</option>
+            <option value="11:00:00.000">11:00 am - 12:00 pm</option>
+            <option value="12:00:00.000">12:00 pm- 1:00 pm</option>
+            <option value="13:00:00.000">1:00 pm- 2:00 pm</option>
+            <option value="14:00:00.000">2:00 pm- 3:00 pm</option>
+            <option value="15:00:00.000">3:00 pm- 4:00 pm</option>
+        </select>
+        <br>
+        <select #select1 class="form-select" aria-label="doc" required >
+            <!-- <option selected> Select Doctor </option> -->
+            <option *ngFor="let c of docData " value="{{c.userId}}" >{{c.firstName}} {{c.lastName}}</option>
+
+        </select>
+        <br>
+        <button (click)="formData(date.value, time.value,select1.value  )" class="btn btn-primary btn-block mb-4">SUBMIT</button>
+    </div>  
+</div>
+<div class="container" id = "table">
+    <table class="table" >
+          <tr>
+            <th scope="col">Your Appointments History</th>           
+          </tr>
+          <tr *ngFor="let c of appointmentData ">
+            <td> {{c}}  </td>
+          </tr>
+      </table>
+</div>
+<!--                      Calender                                           -->

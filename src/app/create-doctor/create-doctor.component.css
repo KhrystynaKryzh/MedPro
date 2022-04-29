@@ -1,0 +1,20 @@
+.container{
+    box-shadow: 0 16px 24px 2px rgba(31, 44, 190, 0.3), 0 6px 30px 5px rgba(255, 255, 255, 0.12), 0 8px 10px -5px rgba(255, 255, 255, 0.2);
+    border-radius: 2%;
+    padding: 10%;
+    width: 90%;
+    color: #2f3cc5;
+}
+#nav {
+    
+    max-width: 80%;
+    margin: auto;
+    margin-top: 5%;
+   
+    
+}
+@media screen and (max-width: 600px){
+    #nav{
+        max-width: 70%;
+    }
+}
